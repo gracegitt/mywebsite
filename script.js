@@ -36,19 +36,22 @@ function setTheme(mode) {
 const form = document.getElementById('contact-form');
 
 form.addEventListener('submit', async function(e) {
-  e.preventDefault(); // prevent default reload
+  e.preventDefault(); // stop page reload
+
   const formData = new FormData(form);
 
   try {
-    const response = await fetch(form.action, {
+    const response = await fetch('https://formspree.io/f/yourformid', {
       method: 'POST',
       body: formData,
-      headers: { 'Accept': 'application/json' }
+      headers: {
+        'Accept': 'application/json'
+      }
     });
 
     if (response.ok) {
-      alert('Thank you! Your message has been sent.'); // popup message
-      form.reset(); // optional: clear the form fields
+      alert('Thank you! Your message has been sent.'); // popup
+      form.reset(); // clear form
     } else {
       alert('Oops! There was a problem submitting your form.');
     }
@@ -56,10 +59,3 @@ form.addEventListener('submit', async function(e) {
     alert('Oops! There was a problem submitting your form.');
   }
 });
-
-
-    if (mode == 'purple') {
-        document.getElementById('theme-style').href = 'purple.css'
-
-    }
-}
