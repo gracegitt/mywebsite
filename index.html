@@ -166,7 +166,7 @@
 const form = document.getElementById('contact-form');
 
 form.addEventListener('submit', async function(e) {
-  e.preventDefault(); // prevent default browser submission
+  e.preventDefault(); // stop normal submission, so no new tab opens
 
   const formData = new FormData(form);
   const submitButton = form.querySelector('button');
@@ -182,16 +182,17 @@ form.addEventListener('submit', async function(e) {
     });
 
     if (response.ok) {
-      alert('Thank you for your submission!'); // success popup
+      alert('Thank you for your submission!'); // simple popup
       submitButton.innerText = 'Submitted';   // change button text
       submitButton.disabled = true;           // keep disabled
+      form.reset();                           // optional: clear form fields
     } else {
       alert('Oops! There was a problem submitting your form.');
-      submitButton.disabled = false;          // re-enable for retry
+      submitButton.disabled = false;          // allow retry
     }
   } catch (error) {
     alert('Oops! There was a problem submitting your form.');
-    submitButton.disabled = false;            // re-enable for retry
+    submitButton.disabled = false;            // allow retry
   }
 });
 </script>
