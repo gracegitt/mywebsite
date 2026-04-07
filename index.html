@@ -143,7 +143,7 @@
         <div class="main-container">
             <h3 style="text-align: center;">Get In Touch</h3>
 
-            <form id="contact-form" action="https://formspree.io/f/xnjowokz" method="POST" target="_blank">
+            <form id="contact-form">
                 <label>Name</label>
                 <input class="input-field" type="text" name="name">
 
@@ -173,7 +173,7 @@ form.addEventListener('submit', async function(e) {
   submitButton.disabled = true; // prevent multiple clicks
 
   try {
-    const response = await fetch('https://formspree.io/f/yourformid', {
+    const response = await fetch('https://formspree.io/f/xnjowokz', {
       method: 'POST',
       body: formData,
       headers: { 'Accept': 'application/json' }
