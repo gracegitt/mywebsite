@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Store - NAMEi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="default.css">
+    <style>
+        /* Store-specific styling */
+        .store-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .store-item {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 260px;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .store-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .store-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .store-item h5 {
+            margin: 0.5rem 0;
+        }
+
+        .store-item p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .store-item button {
+            margin-top: 1rem;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .store-item button:hover {
+            background: #0056b3;
+        }
+
+        .section-header {
+            text-align: center;
+            margin: 2rem 0 1rem 0;
+            font-size: 1.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav-wrapper">
+        <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+        </div>
+        <ul id="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+    </div>
+
+    <!-- Courses Section -->
+    <section class="s2">
+        <h2 class="section-header">Courses</h2>
+        <div class="store-grid">
+            <div class="store-item">
+                <img src="images/course1.jpg" alt="React Basics">
+                <h5>React Basics</h5>
+                <p>Step-by-step guide to learn React fundamentals.</p>
+                <button>Buy Course - $20</button>
+            </div>
+            <div class="store-item">
+                <img src="images/course2.jpg" alt="Django Web App">
+                <h5>Django Web App</h5>
+                <p>Build a full-stack web app with Django and React.</p>
+                <button>Buy Course - $30</button>
+            </div>
+            <div class="store-item">
+                <img src="images/course3.jpg" alt="Python Automation">
+                <h5>Python Automation</h5>
+                <p>Automate tasks using Python scripts and libraries.</p>
+                <button>Buy Course - $25</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section class="s1">
+        <h2 class="section-header">Templates</h2>
+        <div class="store-grid">
+            <div class="store-item">
+                <img src="images/template1.jpg" alt="Landing Page Template">
+                <h5>Landing Page Template</h5>
+                <p>Clean, professional landing page template.</p>
+                <button>Download Template</button>
+            </div>
+            <div class="store-item">
+                <img src="images/template2.jpg" alt="Portfolio Template">
+                <h5>Portfolio Template</h5>
+                <p>Showcase your work in a modern portfolio layout.</p>
+                <button>Download Template</button>
+            </div>
+            <div class="store-item">
+                <img src="images/template3.jpg" alt="E-commerce Template">
+                <h5>E-commerce Template</h5>
+                <p>Ready-to-use template for online stores.</p>
+                <button>Download Template</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="s2">
+        <div class="main-container">
+            <div class="footer-wrapper" style="text-align:center; padding:2rem 0;">
+                <div class="footer-links" style="margin-bottom:1rem;">
+                    <a href="index.html" style="margin:0 1rem;">Home</a>|
+                    <a href="blog.html" style="margin:0 1rem;">Blogs</a>|
+                    <a href="membership.html" style="margin:0 1rem;">Membership</a>|
+                    <a href="store.html" style="margin:0 1rem;">Store</a>|
+                    <a href="newsletter.html" style="margin:0 1rem;">Newsletter</a>
+                </div>
+                <div class="footer-info" style="font-size:0.9rem; color:#555;">
+                    <p>&copy; 2026 Grace Njeri. All Rights Reserved.</p>
+                    <p>Follow me on 
+                        <a target="_blank" href="#">Twitter</a> | 
+                        <a target="_blank" href="#">YouTube</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

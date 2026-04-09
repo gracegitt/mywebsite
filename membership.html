@@ -7,7 +7,100 @@
     <title>Membership - NAMEi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="default.css">
-    <link id="theme-style" href="blue.css" rel="stylesheet">
+    <style>
+        /* Membership-specific styling */
+        .pricing-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .pricing-card {
+            background: #fff;
+            padding: 2rem;
+            width: 280px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pricing-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .pricing-card p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        .pricing-card .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .pricing-card button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .pricing-card button:hover {
+            background: #0056b3;
+        }
+
+        .section-header {
+            text-align: center;
+            margin: 2rem 0 1rem 0;
+            font-size: 1.8rem;
+        }
+
+        .perk-preview {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .perk-card {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 10px;
+            width: 220px;
+            text-align: center;
+        }
+
+        .perk-card img {
+            max-width: 100%;
+            border-radius: 6px;
+        }
+
+        .perk-card h5 {
+            margin: 0.5rem 0;
+        }
+
+        .community-info {
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            text-align: center;
+            font-size: 1rem;
+            color: #555;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,77 +119,65 @@
         </ul>
     </div>
 
-    <!-- Membership Plans -->
+    <!-- Hero -->
     <section class="s2">
-        <div class="main-container">
-            <h2 style="text-align:center; margin-bottom:2rem;">Join Our Community</h2>
-            <div class="post-wrapper">
-                <div class="post">
-                    <h6 class="post-title">Basic Membership</h6>
-                    <p>Access to community forums and free templates.</p>
-                    <p><strong>Price:</strong> $10/month</p>
-                    <button>Join Now</button>
-                </div>
-                <div class="post">
-                    <h6 class="post-title">Pro Membership</h6>
-                    <p>Everything in Basic + access to courses and exclusive templates.</p>
-                    <p><strong>Price:</strong> $25/month</p>
-                    <button>Join Now</button>
-                </div>
-                <div class="post">
-                    <h6 class="post-title">Premium Membership</h6>
-                    <p>All Pro features + priority support and special workshops.</p>
-                    <p><strong>Price:</strong> $50/month</p>
-                    <button>Join Now</button>
-                </div>
-            </div>
-        </div>
+        <h2 class="section-header">Join Our Community</h2>
+        <p style="text-align:center; max-width:600px; margin:0 auto;">
+            Become a member to access exclusive forums, resources, and perks. All members are automatically subscribed to our newsletter.
+        </p>
     </section>
 
-    <!-- Courses / Templates Preview -->
+    <!-- Pricing Cards -->
     <section class="s1">
         <div class="main-container">
-            <h3 style="text-align:center; margin-bottom:2rem;">Courses & Templates</h3>
-            <div class="post-wrapper">
-                <div class="post">
-                    <img class="thumbnail" src="images/course1.jpg">
-                    <div class="post-preview">
-                        <h6 class="post-title">Course 1: React Basics</h6>
-                        <p>Step-by-step guide to React development.</p>
-                        <button>Buy Course</button>
-                    </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <p>Community access + free templates</p>
+                    <p class="price">$10/month</p>
+                    <button>Join Now</button>
                 </div>
-                <div class="post">
-                    <img class="thumbnail" src="images/template1.jpg">
-                    <div class="post-preview">
-                        <h6 class="post-title">Template 1</h6>
-                        <p>Professional landing page template.</p>
-                        <button>Download</button>
-                    </div>
+                <div class="pricing-card">
+                    <h3>Pro</h3>
+                    <p>Everything in Basic + access to courses</p>
+                    <p class="price">$25/month</p>
+                    <button>Join Now</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Premium</h3>
+                    <p>All Pro features + priority support & workshops</p>
+                    <p class="price">$50/month</p>
+                    <button>Join Now</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Community Forums Preview -->
+    <!-- Community Info -->
     <section class="s2">
-        <div class="main-container">
-            <h3 style="text-align:center; margin-bottom:2rem;">Community Forums</h3>
-            <p style="text-align:center;">Engage with other members, ask questions, and share your knowledge.</p>
-            <div style="text-align:center; margin-top:1rem;">
-                <button>Enter Forums</button>
-            </div>
+        <div class="community-info">
+            <h3>Community Forums & Newsletter</h3>
+            <p>Connect with members in our forums. All members are automatically added to our newsletter so you never miss updates.</p>
+            <button onclick="location.href='forums.html'">Go to Forums</button>
         </div>
     </section>
 
-    <!-- Newsletter Signup -->
+    <!-- Perks Preview (Courses/Templates highlight only) -->
     <section class="s1">
-        <div class="main-container">
-            <h3 style="text-align:center; margin-bottom:2rem;">Stay Updated</h3>
-            <form id="newsletter-form" style="max-width:400px; margin:0 auto; text-align:center;">
-                <input class="input-field" type="email" name="email" placeholder="Your email" required>
-                <input id="submit-btn" type="submit" value="Subscribe">
-            </form>
+        <h2 class="section-header">Courses & Templates Preview</h2>
+        <div class="perk-preview">
+            <div class="perk-card">
+                <img src="images/course1.jpg" alt="Course 1">
+                <h5>React Basics</h5>
+                <p>Step-by-step React course.</p>
+                <button onclick="location.href='store.html'">View Course</button>
+            </div>
+            <div class="perk-card">
+                <img src="images/template1.jpg" alt="Template 1">
+                <h5>Landing Page Template</h5>
+                <p>Professional landing page template.</p>
+                <button onclick="location.href='store.html'">View Template</button>
+            </div>
         </div>
     </section>
 
@@ -122,7 +203,6 @@
         </div>
     </section>
 
-    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
