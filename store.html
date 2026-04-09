@@ -3,37 +3,75 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Store - NAMEi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="default.css">
     <style>
-        /* Store-specific styling */
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background: #fff;
+            margin: 0;
+        }
+
+        /* Navigation */
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background: #f4f4f4;
+        }
+
+        #navigation li {
+            display: inline-block;
+            margin: 0 1rem;
+        }
+
+        /* Sections */
+        .section-header {
+            text-align: center;
+            margin: 2rem 0 1rem;
+            font-size: 2rem;
+        }
+
         .store-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 2rem;
             justify-content: center;
-            margin: 2rem 0;
+            gap: 2rem;
+            margin: 2rem 1rem;
         }
 
         .store-item {
+            position: relative;
             background: #fff;
             border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
             width: 260px;
             padding: 1rem;
             text-align: center;
-            transition: transform 0.2s;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .store-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         }
 
         .store-item img {
-            max-width: 100%;
+            width: 100%;
             border-radius: 8px;
+            transition: filter 0.3s;
+        }
+
+        /* Blurred previews for courses */
+        .store-item.course img {
+            filter: blur(5px);
+        }
+
+        .store-item.course:hover img {
+            filter: blur(0);
         }
 
         .store-item h5 {
@@ -46,24 +84,45 @@
         }
 
         .store-item button {
-            margin-top: 1rem;
-            background: #007bff;
+            margin-top: 0.8rem;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             color: #fff;
             border: none;
-            padding: 0.6rem 1rem;
-            border-radius: 6px;
+            padding: 0.6rem 1.4rem;
+            border-radius: 25px;
             cursor: pointer;
             font-weight: bold;
+            transition: transform 0.2s;
         }
 
         .store-item button:hover {
-            background: #0056b3;
+            transform: scale(1.05);
         }
 
-        .section-header {
+        /* Featured Badge */
+        .badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #ff4081;
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer-wrapper {
             text-align: center;
-            margin: 2rem 0 1rem 0;
-            font-size: 1.8rem;
+            padding: 2rem 0;
+            background: #f4f4f4;
+        }
+
+        .footer-links a {
+            margin: 0 0.8rem;
+            color: #333;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -89,23 +148,25 @@
     <section class="s2">
         <h2 class="section-header">Courses</h2>
         <div class="store-grid">
-            <div class="store-item">
+            <div class="store-item course">
+                <div class="badge">Hot</div>
                 <img src="images/course1.jpg" alt="React Basics">
                 <h5>React Basics</h5>
-                <p>Step-by-step guide to learn React fundamentals.</p>
-                <button>Buy Course - $20</button>
+                <p>Step-by-step React course. Members only!</p>
+                <button>Unlock - $20</button>
             </div>
-            <div class="store-item">
+            <div class="store-item course">
                 <img src="images/course2.jpg" alt="Django Web App">
                 <h5>Django Web App</h5>
-                <p>Build a full-stack web app with Django and React.</p>
-                <button>Buy Course - $30</button>
+                <p>Build full-stack apps with Django & React.</p>
+                <button>Unlock - $30</button>
             </div>
-            <div class="store-item">
+            <div class="store-item course">
+                <div class="badge">New</div>
                 <img src="images/course3.jpg" alt="Python Automation">
                 <h5>Python Automation</h5>
-                <p>Automate tasks using Python scripts and libraries.</p>
-                <button>Buy Course - $25</button>
+                <p>Automate tasks with Python scripts & libraries.</p>
+                <button>Unlock - $25</button>
             </div>
         </div>
     </section>
@@ -114,48 +175,41 @@
     <section class="s1">
         <h2 class="section-header">Templates</h2>
         <div class="store-grid">
-            <div class="store-item">
+            <div class="store-item template">
                 <img src="images/template1.jpg" alt="Landing Page Template">
                 <h5>Landing Page Template</h5>
-                <p>Clean, professional landing page template.</p>
-                <button>Download Template</button>
+                <p>Clean, professional landing page layout.</p>
+                <button>Download</button>
             </div>
-            <div class="store-item">
+            <div class="store-item template">
                 <img src="images/template2.jpg" alt="Portfolio Template">
                 <h5>Portfolio Template</h5>
-                <p>Showcase your work in a modern portfolio layout.</p>
-                <button>Download Template</button>
+                <p>Modern portfolio template to showcase work.</p>
+                <button>Download</button>
             </div>
-            <div class="store-item">
+            <div class="store-item template">
+                <div class="badge">Featured</div>
                 <img src="images/template3.jpg" alt="E-commerce Template">
                 <h5>E-commerce Template</h5>
                 <p>Ready-to-use template for online stores.</p>
-                <button>Download Template</button>
+                <button>Download</button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <section class="s2">
-        <div class="main-container">
-            <div class="footer-wrapper" style="text-align:center; padding:2rem 0;">
-                <div class="footer-links" style="margin-bottom:1rem;">
-                    <a href="index.html" style="margin:0 1rem;">Home</a>|
-                    <a href="blog.html" style="margin:0 1rem;">Blogs</a>|
-                    <a href="membership.html" style="margin:0 1rem;">Membership</a>|
-                    <a href="store.html" style="margin:0 1rem;">Store</a>|
-                    <a href="newsletter.html" style="margin:0 1rem;">Newsletter</a>
-                </div>
-                <div class="footer-info" style="font-size:0.9rem; color:#555;">
-                    <p>&copy; 2026 Grace Njeri. All Rights Reserved.</p>
-                    <p>Follow me on 
-                        <a target="_blank" href="#">Twitter</a> | 
-                        <a target="_blank" href="#">YouTube</a>
-                    </p>
-                </div>
+        <div class="footer-wrapper">
+            <div class="footer-links">
+                <a href="index.html">Home</a>|
+                <a href="blog.html">Blogs</a>|
+                <a href="membership.html">Membership</a>|
+                <a href="store.html">Store</a>|
+                <a href="newsletter.html">Newsletter</a>
             </div>
+            <p style="color:#555; font-size:0.9rem;">&copy; 2026 Grace Njeri. All Rights Reserved.</p>
         </div>
     </section>
-</body>
 
+</body>
 </html>
