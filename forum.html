@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Members Hangout - NAMEi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="default.css">
+    <style>
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background: #fff;
+            margin: 0;
+        }
+
+        /* Navigation */
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background: #f4f4f4;
+        }
+
+        #navigation li {
+            display: inline-block;
+            margin: 0 1rem;
+        }
+
+        /* Forum Layout */
+        .forum-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .forum-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .forum-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .thread-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .thread-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .thread-card h5 {
+            margin: 0.5rem 0;
+        }
+
+        .thread-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: #ff4081;
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        /* Discord Embed */
+        .discord-widget {
+            text-align: center;
+            margin: 2rem auto;
+        }
+
+        .discord-widget iframe {
+            border-radius: 12px;
+            border: none;
+            width: 350px;
+            height: 500px;
+        }
+
+        /* Member Only Message */
+        .member-lock {
+            text-align: center;
+            margin-top: 3rem;
+            color: #777;
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .footer-wrapper {
+            text-align: center;
+            padding: 2rem 0;
+            background: #f4f4f4;
+        }
+
+        .footer-links a {
+            margin: 0 0.8rem;
+            color: #333;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="nav-wrapper">
+        <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+        </div>
+        <ul id="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="forum.html">Forum</a></li>
+        </ul>
+    </div>
+
+    <!-- Forum Header -->
+    <section class="forum-container">
+        <h2 class="forum-header">Members Hangout</h2>
+
+        <div class="forum-grid">
+            <div class="thread-card">
+                <div class="badge">New</div>
+                <h5>React Basics Discussion</h5>
+                <p>Discuss lessons, share progress, and ask questions.</p>
+            </div>
+            <div class="thread-card">
+                <h5>Django Projects</h5>
+                <p>Show off your projects, get feedback, and help others.</p>
+            </div>
+            <div class="thread-card">
+                <div class="badge">Hot</div>
+                <h5>Weekly Coding Challenge</h5>
+                <p>Participate in mini-projects and earn badges.</p>
+            </div>
+            <div class="thread-card">
+                <h5>Templates Showcase</h5>
+                <p>Members share custom template designs and tips.</p>
+            </div>
+        </div>
+
+        <!-- Discord Embed -->
+        <div class="discord-widget">
+            <h3>Join our Member Discord</h3>
+            <!-- Replace SERVER_ID with your actual Discord server ID -->
+            <iframe src="https://discord.com/widget?id=YOUR_SERVER_ID&theme=light" allowtransparency="true" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+        </div>
+
+        <p class="member-lock">*Forum and Discord access are for members only. Join to unlock full access!</p>
+    </section>
+
+    <!-- Footer -->
+    <section class="s2">
+        <div class="footer-wrapper">
+            <div class="footer-links">
+                <a href="index.html">Home</a>|
+                <a href="blog.html">Blogs</a>|
+                <a href="membership.html">Membership</a>|
+                <a href="store.html">Store</a>|
+                <a href="newsletter.html">Newsletter</a>
+            </div>
+            <p style="color:#555; font-size:0.9rem;">&copy; 2026 Grace Njeri. All Rights Reserved.</p>
+        </div>
+    </section>
+</body>
+
+</html>
