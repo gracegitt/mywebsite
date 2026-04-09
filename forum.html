@@ -29,7 +29,7 @@
 
         /* Forum Layout */
         .forum-container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
@@ -43,7 +43,7 @@
         .forum-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 2rem;
+            gap: 1.5rem;
             justify-content: center;
         }
 
@@ -91,7 +91,46 @@
             color: #333;
         }
 
-        /* Discord Embed */
+        .comment-section {
+            margin-top: 0.8rem;
+        }
+
+        .comment-section input,
+        .comment-section textarea {
+            width: 100%;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .comment-section button {
+            background: #4caf50;
+            color: #fff;
+            padding: 0.4rem 0.8rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .comment-section button:hover {
+            background: #45a049;
+        }
+
+        .comments {
+            margin-top: 0.5rem;
+        }
+
+        .comment {
+            font-size: 0.85rem;
+            margin-bottom: 0.3rem;
+            padding: 0.3rem 0.5rem;
+            background: #f9f9f9;
+            border-radius: 6px;
+        }
+
+        /* Discord Embed + GIF placeholder */
         .discord-widget {
             text-align: center;
             margin: 2rem auto;
@@ -102,6 +141,16 @@
             border: none;
             width: 350px;
             height: 500px;
+        }
+
+        .discord-placeholder {
+            width: 350px;
+            margin: 1rem auto;
+        }
+
+        .discord-placeholder img {
+            width: 100%;
+            border-radius: 12px;
         }
 
         /* Footer */
@@ -136,79 +185,87 @@
         </ul>
     </div>
 
-    <!-- Forum Header -->
     <section class="forum-container">
         <h2 class="forum-header">Members Hangout</h2>
 
         <div class="forum-grid">
-            <div class="thread-card">
-                <div class="badge">New</div>
-                <h5>React Basics Discussion</h5>
-                <p>Click to expand discussion</p>
-                <div class="thread-details">
-                    Discuss lessons, share progress, and ask questions.
-                    <br><a href="#">Go to Discord Thread</a>
-                    <br><em>Earn 5 XP for posting!</em>
-                </div>
-            </div>
-
-            <div class="thread-card">
-                <h5>Django Projects</h5>
-                <p>Click to expand discussion</p>
-                <div class="thread-details">
-                    Show off your projects, get feedback, and help others.
-                    <br><a href="#">Go to Discord Thread</a>
-                    <br><em>Earn 10 XP for feedback!</em>
-                </div>
-            </div>
-
+            <!-- Coding Challenge -->
             <div class="thread-card">
                 <div class="badge">Hot</div>
                 <h5>Weekly Coding Challenge</h5>
                 <p>Click to reveal challenge</p>
                 <div class="thread-details">
-                    <strong>Challenge:</strong> Build a small to-do app in React with localStorage.
-                    <br>Submit your solution in the Discord #challenges channel.
-                    <br><em>Earn 15 XP for completing!</em>
+                    <strong>Challenge:</strong> Build a mini to-do app with React and localStorage.
+                    <div class="comment-section">
+                        <textarea placeholder="Write your solution summary here"></textarea>
+                        <button>Add Submission</button>
+                        <div class="comments"></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="thread-card">
-                <h5>Templates Showcase</h5>
-                <p>Click to expand showcase</p>
-                <div class="thread-details">
-                    Members share custom template designs and tips.
-                    <br><a href="#">Go to Discord Thread</a>
-                    <br><em>Earn 5 XP for sharing!</em>
-                </div>
-            </div>
-
+            <!-- Q&A -->
             <div class="thread-card">
                 <h5>Q&A / Tips</h5>
                 <p>Click to expand</p>
                 <div class="thread-details">
-                    Ask questions, share coding tips, and help others.
-                    <br><a href="#">Go to Discord Thread</a>
-                    <br><em>Earn 5 XP per answered question!</em>
+                    Ask questions, share tips, or answer peers.
+                    <div class="comment-section">
+                        <input placeholder="Your name">
+                        <textarea placeholder="Your message"></textarea>
+                        <button>Post</button>
+                        <div class="comments"></div>
+                    </div>
                 </div>
             </div>
 
+            <!-- Templates Showcase -->
+            <div class="thread-card">
+                <h5>Templates Showcase</h5>
+                <p>Click to expand showcase</p>
+                <div class="thread-details">
+                    Members share template designs.
+                    <div class="comment-section">
+                        <textarea placeholder="Share your template link or description"></textarea>
+                        <button>Post</button>
+                        <div class="comments"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Projects -->
+            <div class="thread-card">
+                <h5>Featured Projects</h5>
+                <p>Click to expand</p>
+                <div class="thread-details">
+                    Show your projects and get feedback.
+                    <div class="comment-section">
+                        <textarea placeholder="Describe your project"></textarea>
+                        <button>Post</button>
+                        <div class="comments"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Announcements -->
             <div class="thread-card">
                 <h5>Announcements</h5>
                 <p>Click to expand</p>
                 <div class="thread-details">
-                    Course updates, new templates, contests, and community news.
-                    <br><a href="#">Go to Discord Thread</a>
-                    <br><em>Stay updated to earn bonus XP!</em>
+                    Course updates, contests, and community news.
                 </div>
             </div>
         </div>
 
-        <!-- Discord Embed -->
+        <!-- Discord Embed + GIF placeholder -->
         <div class="discord-widget">
-            <h3>Join our Member Discord</h3>
-            <!-- Replace YOUR_SERVER_ID with your actual Discord server ID -->
-            <iframe src="https://discord.com/widget?id=YOUR_SERVER_ID&theme=light" allowtransparency="true" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            <h3>Bonus: Join our Member Discord</h3>
+            <!-- Discord widget -->
+            <iframe src="https://discord.com/widget?id=YOUR_SERVER_ID&theme=light" allowtransparency="true"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            <div class="discord-placeholder">
+                <img src="https://media.giphy.com/media/l4pTfx2qLszoacZRS/giphy.gif" alt="Discord coming soon GIF">
+            </div>
         </div>
     </section>
 
@@ -227,7 +284,7 @@
     </section>
 
     <script>
-        // Card click toggle
+        // Toggle thread details
         const cards = document.querySelectorAll('.thread-card');
         cards.forEach(card => {
             card.addEventListener('click', () => {
@@ -236,6 +293,28 @@
                     details.style.display = 'none';
                 } else {
                     details.style.display = 'block';
+                }
+            });
+        });
+
+        // Add comments locally
+        const commentSections = document.querySelectorAll('.comment-section');
+        commentSections.forEach(section => {
+            const button = section.querySelector('button');
+            const commentsDiv = section.querySelector('.comments');
+            button.addEventListener('click', (e) => {
+                e.stopPropagation(); // don't close thread
+                const input = section.querySelector('input') || { value: 'Anonymous' };
+                const textarea = section.querySelector('textarea');
+                const name = input.value || 'Anonymous';
+                const message = textarea.value;
+                if (message.trim() !== '') {
+                    const div = document.createElement('div');
+                    div.className = 'comment';
+                    div.textContent = name + ': ' + message;
+                    commentsDiv.appendChild(div);
+                    textarea.value = '';
+                    if (input.value) input.value = '';
                 }
             });
         });
