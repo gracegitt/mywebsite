@@ -9,13 +9,12 @@
 
     <style>
         body {
-            font-family: 'Roboto Mono', monospace;
-            background: #ffffff;
             margin: 0;
+            background: #ffffff;
             color: #111;
         }
 
-        /* NAV (UNCHANGED STYLE, MINIMAL STRIPE FEEL) */
+        /* NAV (keep consistent with site) */
         .nav-wrapper {
             display: flex;
             align-items: center;
@@ -43,40 +42,39 @@
         /* HERO (STRIPE-STYLE CLEAN TYPOGRAPHY) */
         .hero {
             text-align: center;
-            padding: 6rem 1rem 3rem;
-            max-width: 850px;
+            padding: 7rem 1rem 3.5rem;
+            max-width: 860px;
             margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 2.8rem;
-            letter-spacing: -0.5px;
+            font-size: 3rem;
+            letter-spacing: -0.8px;
             margin-bottom: 1rem;
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: #555;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            line-height: 1.6;
+            max-width: 620px;
+            margin: 0 auto 2.2rem;
+            line-height: 1.7;
         }
 
-        /* FORM (PRIMARY FOCUS) */
+        /* FORM (PRIMARY CTA) */
         .subscribe {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             flex-wrap: wrap;
         }
 
         .subscribe input {
-            padding: 14px;
-            width: 300px;
-            border: 1px solid #ddd;
+            padding: 14px 16px;
+            width: 320px;
+            border: 1px solid #e2e2e2;
             border-radius: 10px;
             outline: none;
-            font-family: inherit;
         }
 
         .subscribe button {
@@ -85,28 +83,49 @@
             border: none;
             background: #111;
             color: #fff;
-            font-weight: bold;
+            font-weight: 600;
             cursor: pointer;
         }
 
         .subscribe button:hover {
-            background: #333;
+            background: #2a2a2a;
         }
 
-        /* TRUST (VERY MINIMAL, STRIPE-LIKE TEXT ONLY) */
+        /* TRUST SECTION (CLEAN LOGO ROW) */
         .trust {
             text-align: center;
-            margin-top: 4rem;
-            color: #777;
+            margin-top: 4.5rem;
+            padding-bottom: 2rem;
+        }
+
+        .trust-text {
             font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 1.2rem;
         }
 
-        .trust span {
-            display: inline-block;
-            margin: 0 10px;
+        .logo-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 22px;
+            flex-wrap: wrap;
         }
 
-        /* FOOTER (MATCH INDEX STYLE EXACT) */
+        .logo-row img {
+            width: 22px;
+            height: 22px;
+            opacity: 0.65;
+            filter: grayscale(1);
+            transition: 0.2s ease;
+        }
+
+        .logo-row img:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER (UNCHANGED FROM SITE) */
         .footer-wrapper {
             text-align: center;
             padding: 2rem 0;
@@ -127,7 +146,7 @@
 
 <body>
 
-    <!-- NAV (UNCHANGED STRUCTURE) -->
+    <!-- NAV (UNCHANGED) -->
     <div class="nav-wrapper">
         <div><strong>NAMEi</strong></div>
         <ul id="navigation">
@@ -139,11 +158,11 @@
         </ul>
     </div>
 
-    <!-- HERO (STRIPE STYLE FOCUS) -->
+    <!-- HERO -->
     <section class="hero">
         <h1>One email. Real developer growth.</h1>
         <p>
-            Weekly insights, tools, and breakdowns from real projects — designed to make you a sharper builder, not a louder one.
+            Weekly insights, systems, and breakdowns from real builds — designed to sharpen how you think, not just what you code.
         </p>
 
         <form class="subscribe">
@@ -152,12 +171,21 @@
         </form>
     </section>
 
-    <!-- MINIMAL TRUST LINE (NO LOGOS, STRIPE STYLE) -->
+    <!-- TRUST LOGOS (CLEAN STRIPE STYLE) -->
     <section class="trust">
-        Trusted by developers building with <span>GitHub</span> <span>AWS</span> <span>Stripe</span> <span>Vercel</span> <span>Google Cloud</span>
+        <div class="trust-text">Trusted by developers building with</div>
+
+        <div class="logo-row">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub" />
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googlecloud.svg" alt="Google Cloud" />
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoft.svg" alt="Microsoft" />
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonaws.svg" alt="AWS" />
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/stripe.svg" alt="Stripe" />
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/vercel.svg" alt="Vercel" />
+        </div>
     </section>
 
-    <!-- FOOTER (E) -->
+    <!-- FOOTER (UNCHANGED) -->
     <section class="s2">
         <div class="footer-wrapper">
             <div class="footer-links">
