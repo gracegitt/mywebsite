@@ -10,19 +10,19 @@
     <style>
         body {
             font-family: 'Roboto Mono', monospace;
-            background: #fff;
+            background: #ffffff;
             margin: 0;
             color: #111;
         }
 
-        /* NAVIGATION (MATCHES YOUR SITE) */
+        /* NAV (UNCHANGED STYLE, MINIMAL STRIPE FEEL) */
         .nav-wrapper {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 1rem 2rem;
-            background: #f4f4f4;
-            border-bottom: 1px solid #e8e8e8;
+            background: #fff;
+            border-bottom: 1px solid #eee;
         }
 
         #navigation li {
@@ -32,38 +32,38 @@
 
         #navigation a {
             text-decoration: none;
-            color: #222;
-            opacity: 0.75;
+            color: #111;
+            opacity: 0.7;
         }
 
         #navigation a:hover {
             opacity: 1;
         }
 
-        /* HERO (MINIMAL, STRONG TYPOGRAPHY) */
+        /* HERO (STRIPE-STYLE CLEAN TYPOGRAPHY) */
         .hero {
             text-align: center;
-            padding: 5rem 1rem 3rem;
-            max-width: 800px;
+            padding: 6rem 1rem 3rem;
+            max-width: 850px;
             margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 2.4rem;
+            font-size: 2.8rem;
+            letter-spacing: -0.5px;
             margin-bottom: 1rem;
         }
 
         .hero p {
-            max-width: 600px;
-            margin: 0 auto;
+            font-size: 1.1rem;
             color: #555;
-            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
             line-height: 1.6;
         }
 
-        /* SUBSCRIBE BOX */
+        /* FORM (PRIMARY FOCUS) */
         .subscribe {
-            margin-top: 2rem;
             display: flex;
             justify-content: center;
             gap: 10px;
@@ -71,70 +71,63 @@
         }
 
         .subscribe input {
-            padding: 12px;
-            width: 280px;
+            padding: 14px;
+            width: 300px;
             border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 10px;
             outline: none;
+            font-family: inherit;
         }
 
         .subscribe button {
-            padding: 12px 16px;
+            padding: 14px 18px;
+            border-radius: 10px;
             border: none;
-            border-radius: 8px;
             background: #111;
             color: #fff;
-            cursor: pointer;
             font-weight: bold;
+            cursor: pointer;
         }
 
         .subscribe button:hover {
             background: #333;
         }
 
-        /* TRUST STRIP (NO IMAGES — CLEAN BADGES) */
+        /* TRUST (VERY MINIMAL, STRIPE-LIKE TEXT ONLY) */
         .trust {
             text-align: center;
-            margin: 3rem auto;
-            max-width: 800px;
-        }
-
-        .trust-title {
+            margin-top: 4rem;
+            color: #777;
             font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 1rem;
         }
 
-        .badge-row {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
+        .trust span {
+            display: inline-block;
+            margin: 0 10px;
         }
 
-        .badge {
-            border: 1px solid #e5e5e5;
-            padding: 6px 12px;
-            border-radius: 999px;
-            font-size: 0.8rem;
-            color: #444;
-            background: #fafafa;
-        }
-
-        /* FOOTER */
+        /* FOOTER (MATCH INDEX STYLE EXACT) */
         .footer-wrapper {
             text-align: center;
-            padding: 3rem 1rem;
-            font-size: 0.85rem;
-            color: #777;
-            border-top: 1px solid #eee;
+            padding: 2rem 0;
+            background: #f4f4f4;
+        }
+
+        .footer-links a {
+            margin: 0 0.8rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.7;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- NAV -->
+    <!-- NAV (UNCHANGED STRUCTURE) -->
     <div class="nav-wrapper">
         <div><strong>NAMEi</strong></div>
         <ul id="navigation">
@@ -146,11 +139,11 @@
         </ul>
     </div>
 
-    <!-- HERO -->
+    <!-- HERO (STRIPE STYLE FOCUS) -->
     <section class="hero">
         <h1>One email. Real developer growth.</h1>
         <p>
-            Weekly insights, tools, and breakdowns from real projects — no noise, no spam, just things that actually help you build better.
+            Weekly insights, tools, and breakdowns from real projects — designed to make you a sharper builder, not a louder one.
         </p>
 
         <form class="subscribe">
@@ -159,24 +152,24 @@
         </form>
     </section>
 
-    <!-- TRUST (CLEAN BADGES INSTEAD OF LOGOS) -->
+    <!-- MINIMAL TRUST LINE (NO LOGOS, STRIPE STYLE) -->
     <section class="trust">
-        <div class="trust-title">Built for developers working with</div>
-
-        <div class="badge-row">
-            <div class="badge">GitHub</div>
-            <div class="badge">Google Cloud</div>
-            <div class="badge">Microsoft</div>
-            <div class="badge">AWS</div>
-            <div class="badge">Stripe</div>
-            <div class="badge">Vercel</div>
-        </div>
+        Trusted by developers building with <span>GitHub</span> <span>AWS</span> <span>Stripe</span> <span>Vercel</span> <span>Google Cloud</span>
     </section>
 
-    <!-- FOOTER -->
-    <div class="footer-wrapper">
-        © 2026 NAMEi — Built for developers who actually build.
-    </div>
+    <!-- FOOTER (E) -->
+    <section class="s2">
+        <div class="footer-wrapper">
+            <div class="footer-links">
+                <a href="index.html">Home</a>|
+                <a href="blog.html">Blogs</a>|
+                <a href="membership.html">Membership</a>|
+                <a href="store.html">Store</a>|
+                <a href="newsletter.html">Newsletter</a>
+            </div>
+            <p style="color:#555; font-size:0.9rem;">&copy; 2026 NAMEi. All Rights Reserved.</p>
+        </div>
+    </section>
 
 </body>
 
