@@ -1,136 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Newsletter</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #0f0f0f;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
+    <meta charset="utf-8">
+    <title>Newsletter - NAMEi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="default.css">
 
-    .container {
-      max-width: 650px;
-      width: 100%;
-      padding: 24px;
-      background: #1a1a1a;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    }
+    <style>
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background: #fff;
+            margin: 0;
+        }
 
-    h1 {
-      margin-bottom: 10px;
-    }
+        /* Navigation */
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background: #f4f4f4;
+        }
 
-    p {
-      opacity: 0.8;
-      margin-bottom: 20px;
-    }
+        #navigation li {
+            display: inline-block;
+            margin: 0 1rem;
+        }
 
-    form {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 25px;
-    }
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            color: #fff;
+            background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('images/newsletter-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
 
-    input[type="email"] {
-      flex: 1;
-      padding: 12px;
-      border-radius: 8px;
-      border: none;
-      outline: none;
-    }
+        .hero h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
 
-    button {
-      padding: 12px 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      background: #4f46e5;
-      color: white;
-      font-weight: bold;
-    }
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
 
-    .trust {
-      margin-top: 20px;
-    }
+        /* Newsletter Card */
+        .newsletter-box {
+            max-width: 600px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
 
-    .logos {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 12px;
-    }
+        .newsletter-box input {
+            width: 70%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
 
-    .logos img {
-      width: 100%;
-      height: 50px;
-      object-fit: contain;
-      background: #111;
-      padding: 10px;
-      border-radius: 10px;
-      filter: grayscale(100%);
-      opacity: 0.8;
-      transition: 0.2s;
-    }
+        .newsletter-box button {
+            padding: 12px 18px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-    .logos img:hover {
-      filter: grayscale(0%);
-      opacity: 1;
-      transform: scale(1.05);
-    }
+        /* Logos */
+        .logos-section {
+            text-align: center;
+            margin: 3rem 1rem;
+        }
 
-    footer {
-      margin-top: 20px;
-      font-size: 12px;
-      opacity: 0.5;
-      text-align: center;
-    }
+        .logos-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
 
-    .hero-note {
-      font-size: 13px;
-      opacity: 0.7;
-      margin-bottom: 15px;
-    }
-  </style>
+        .logo-card {
+            width: 120px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo-card img {
+            max-width: 80px;
+            max-height: 40px;
+        }
+
+        /* Footer */
+        .footer-wrapper {
+            text-align: center;
+            padding: 2rem 0;
+            background: #f4f4f4;
+        }
+
+        .footer-links a {
+            margin: 0 0.8rem;
+            color: #333;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Join the Newsletter</h1>
-    <p>Get updates, coding challenges, and drops straight to your inbox.</p>
 
-    <form>
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit">Subscribe</button>
-    </form>
-
-    <div class="hero-note">
-      Built for developers, creators, and builders working with modern tech stacks.
+    <!-- Navigation -->
+    <div class="nav-wrapper">
+        <div class="dots-wrapper">
+            <div id="dot-1" class="browser-dot"></div>
+            <div id="dot-2" class="browser-dot"></div>
+            <div id="dot-3" class="browser-dot"></div>
+        </div>
+        <ul id="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
     </div>
 
-    <div class="trust">
-      <strong>Tools and platforms developers love</strong>
-      <div class="logos">
-        <img src="https://logo.clearbit.com/github.com" alt="GitHub" />
-        <img src="https://logo.clearbit.com/google.com" alt="Google" />
-        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" />
-        <img src="https://logo.clearbit.com/aws.amazon.com" alt="AWS" />
-        <img src="https://logo.clearbit.com/stripe.com" alt="Stripe" />
-        <img src="https://logo.clearbit.com/vercel.com" alt="Vercel" />
-      </div>
-    </div>
+    <!-- Hero -->
+    <section class="hero">
+        <h2>Join the Newsletter</h2>
+        <p>Get weekly updates, coding challenges, and exclusive resources from the dev world straight to your inbox.</p>
+    </section>
 
-    <footer>
-      Trusted by developers & creators worldwide
-    </footer>
-  </div>
+    <!-- Newsletter Form -->
+    <section class="s1">
+        <div class="newsletter-box">
+            <h3>Subscribe Now</h3>
+            <p>Be part of a growing developer community.</p>
+            <form>
+                <input type="email" placeholder="Enter your email" required />
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Logos -->
+    <section class="s2">
+        <div class="logos-section">
+            <h3>Trusted by developers using</h3>
+            <div class="logos-grid">
+                <div class="logo-card"><img src="https://logo.clearbit.com/github.com" alt="GitHub"></div>
+                <div class="logo-card"><img src="https://logo.clearbit.com/google.com" alt="Google"></div>
+                <div class="logo-card"><img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft"></div>
+                <div class="logo-card"><img src="https://logo.clearbit.com/aws.amazon.com" alt="AWS"></div>
+                <div class="logo-card"><img src="https://logo.clearbit.com/stripe.com" alt="Stripe"></div>
+                <div class="logo-card"><img src="https://logo.clearbit.com/vercel.com" alt="Vercel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="s2">
+        <div class="footer-wrapper">
+            <div class="footer-links">
+                <a href="index.html">Home</a>|
+                <a href="blog.html">Blogs</a>|
+                <a href="membership.html">Membership</a>|
+                <a href="store.html">Store</a>|
+                <a href="newsletter.html">Newsletter</a>
+            </div>
+            <p style="color:#555; font-size:0.9rem;">&copy; 2026 NAMEi. All Rights Reserved.</p>
+        </div>
+    </section>
+
 </body>
-</html>
+</h
