@@ -14,6 +14,10 @@
             margin: 0;
         }
 
+        /* Layout helpers (since s1/s2 were missing) */
+        .s1 { padding: 2rem 1rem; }
+        .s2 { padding: 2rem 1rem; background: #f7f7f7; }
+
         /* Navigation */
         .nav-wrapper {
             display: flex;
@@ -31,9 +35,15 @@
         /* Hero */
         .hero {
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 5rem 1rem;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color: #fff;
-            background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('images/newsletter-bg.jpg');
+            background-color: #111;
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/newsletter-bg.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -44,15 +54,14 @@
         }
 
         .hero p {
-            max-width: 600px;
-            margin: 0 auto;
+            max-width: 650px;
             opacity: 0.9;
         }
 
-        /* Newsletter Card */
+        /* Newsletter Box */
         .newsletter-box {
             max-width: 600px;
-            margin: 3rem auto;
+            margin: 0 auto;
             padding: 2rem;
             background: #fff;
             border-radius: 12px;
@@ -61,15 +70,14 @@
         }
 
         .newsletter-box input {
-            width: 70%;
+            width: 65%;
             padding: 12px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            margin-right: 10px;
         }
 
         .newsletter-box button {
-            padding: 12px 18px;
+            padding: 12px 16px;
             border: none;
             border-radius: 8px;
             background: linear-gradient(135deg, #6a11cb, #2575fc);
@@ -81,7 +89,6 @@
         /* Logos */
         .logos-section {
             text-align: center;
-            margin: 3rem 1rem;
         }
 
         .logos-grid {
@@ -93,18 +100,18 @@
         }
 
         .logo-card {
-            width: 120px;
-            height: 60px;
+            width: 140px;
+            height: 70px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #f9f9f9;
+            background: #fff;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
         }
 
         .logo-card img {
-            max-width: 80px;
+            max-width: 110px;
             max-height: 40px;
         }
 
@@ -127,11 +134,7 @@
 
     <!-- Navigation -->
     <div class="nav-wrapper">
-        <div class="dots-wrapper">
-            <div id="dot-1" class="browser-dot"></div>
-            <div id="dot-2" class="browser-dot"></div>
-            <div id="dot-3" class="browser-dot"></div>
-        </div>
+        <div><strong>NAMEi</strong></div>
         <ul id="navigation">
             <li><a href="index.html">Home</a></li>
             <li><a href="blog.html">Blogs</a></li>
@@ -141,35 +144,34 @@
         </ul>
     </div>
 
-    <!-- Hero -->
+    <!-- Hero (FIXED VISIBILITY) -->
     <section class="hero">
         <h2>Join the Newsletter</h2>
-        <p>Get weekly updates, coding challenges, and exclusive resources from the dev world straight to your inbox.</p>
+        <p>Get weekly updates, coding challenges, and exclusive resources from developers building real products.</p>
     </section>
 
     <!-- Newsletter Form -->
     <section class="s1">
         <div class="newsletter-box">
-            <h3>Subscribe Now</h3>
-            <p>Be part of a growing developer community.</p>
+            <h3>Subscribe</h3>
             <form>
-                <input type="email" placeholder="Enter your email" required />
-                <button type="submit">Subscribe</button>
+                <input type="email" placeholder="Enter email" required />
+                <button type="submit">Join</button>
             </form>
         </div>
     </section>
 
-    <!-- Logos -->
+    <!-- Logos FIXED (reliable shields.io images) -->
     <section class="s2">
         <div class="logos-section">
-            <h3>Trusted by developers using</h3>
+            <h3>Built with tools developers trust</h3>
             <div class="logos-grid">
-                <div class="logo-card"><img src="https://logo.clearbit.com/github.com" alt="GitHub"></div>
-                <div class="logo-card"><img src="https://logo.clearbit.com/google.com" alt="Google"></div>
-                <div class="logo-card"><img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft"></div>
-                <div class="logo-card"><img src="https://logo.clearbit.com/aws.amazon.com" alt="AWS"></div>
-                <div class="logo-card"><img src="https://logo.clearbit.com/stripe.com" alt="Stripe"></div>
-                <div class="logo-card"><img src="https://logo.clearbit.com/vercel.com" alt="Vercel"></div>
+                <div class="logo-card"><img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white" alt="GitHub"></div>
+                <div class="logo-card"><img src="https://img.shields.io/badge/Google-4285F4?logo=google&logoColor=white" alt="Google"></div>
+                <div class="logo-card"><img src="https://img.shields.io/badge/Microsoft-0078D4?logo=microsoft&logoColor=white" alt="Microsoft"></div>
+                <div class="logo-card"><img src="https://img.shields.io/badge/AWS-232F3E?logo=amazonaws&logoColor=white" alt="AWS"></div>
+                <div class="logo-card"><img src="https://img.shields.io/badge/Stripe-635BFF?logo=stripe&logoColor=white" alt="Stripe"></div>
+                <div class="logo-card"><img src="https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white" alt="Vercel"></div>
             </div>
         </div>
     </section>
@@ -189,4 +191,4 @@
     </section>
 
 </body>
-</h
+</html>
